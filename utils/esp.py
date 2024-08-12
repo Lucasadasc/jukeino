@@ -65,11 +65,11 @@ def gerar_sequencia(numero_piscadas: int) -> list:
         
         # ligando led
         response = requests.post(url, led_it[0]['led'])
-        sleep(0.5)
+        sleep(0.3)
         
         # desligando led
         response = response = requests.post(url, str(led_it[0]['comando_desligar']))
-        sleep(0.5)
+        sleep(0.3)
     
     return lista_sequencia
 
