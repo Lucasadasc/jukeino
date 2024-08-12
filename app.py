@@ -16,6 +16,11 @@ CORS(app)
 load_dotenv()
 print(os.getenv('ESP_IP'))
 
+# Incluindo rotas html
+@app.route('/')
+def home():
+    return render_template('index.html')
+
 # Importando rotas 
 from entidades.Testes import rotas_testes
 from entidades.Sequencias import rotas_sequencias
