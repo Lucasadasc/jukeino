@@ -85,8 +85,8 @@ def ligando_led_especifico(led_id: int):
     led_it = list(filter(lambda x: x['led'] == str(led_id), comandos))
     
     #Ligando led
-    requests.post(url, str(led_id))
+    requests.post(url, str(led_it))
     sleep(0.5)
     
     #Desligando leds
-    requests.post(url, str(led_id[0]['comando_desligar']))
+    requests.post(url, str(led_it[0]['comando_desligar']))
