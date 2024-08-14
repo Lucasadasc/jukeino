@@ -87,7 +87,9 @@ def ligando_led_especifico(led_id: int):
     
     #Ligando led
     requests.post(url, str(led_it['led']))
-    sleep(0.5)
+    sleep(0.4)
     
     #Desligando leds
     requests.post(url, str(led_it['comando_desligar']))
+    
+    
