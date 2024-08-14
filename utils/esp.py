@@ -56,6 +56,7 @@ def gerar_sequencia(numero_piscadas: int) -> list:
     lista_sequencia = [str(random.randint(1, 7)) for _ in range(numero_piscadas)]
     
     # Ligando e desligando leds na sequencia indicada 
+    sleep(2)
     for numero in lista_sequencia:
         # filtrando numero na lista de comandos
         led_it = list(filter(lambda x: x['led'] == numero, comandos))
